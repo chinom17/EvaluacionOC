@@ -1,0 +1,14 @@
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column.name}}" *ngFor="let column of columnsToDisplay" >
+    <th mat-header-cell *matHeaderCellDef> {{column.display}} </th>
+    <td mat-cell [id]="element.id" *matCellDef="let element"> {{element[column.name]}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnsNames"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsNames;" class="element-row"
+    [class.example-expanded-row]="selectedElement === element"
+    [ngClass]="{'highlight': selectedRowIndex == element.id}"
+    (click)="onClick($event, element)">
+  </tr>
+
+
+</table>

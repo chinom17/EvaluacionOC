@@ -1,0 +1,11 @@
+<mat-card class="card">
+  <div class="divCont">
+    <ev-input-standar placeholder="Nombre de usuario" nombre="nombre de usuario" requerido="true" minLength="7" (blur)="onBlurNU($event)"></ev-input-standar>
+    <ev-input-email placeholder="Password" [texto]="usuario.email" (blur)="onBlurEmail($event)"></ev-input-email>
+    <ev-input-password (blur)="onBlurPass($event)"></ev-input-password>
+    <ev-select [Source]="source" [value]="usuario.genero" (onSelect)="onSelect($event)" placeholder="Sexo"></ev-select>
+    <div>
+      <button mat-raised-button (click)="onClick()" [disabled]="!btnEnabled">Guardar</button>
+    </div>
+  </div>
+</mat-card>

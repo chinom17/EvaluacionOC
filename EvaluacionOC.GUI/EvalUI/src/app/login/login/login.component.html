@@ -1,0 +1,9 @@
+<mat-card>
+  <div class="divCont">
+    <ev-input-standar placeholder="Usuario" (blur)="onBlurUser($event)"></ev-input-standar>
+    <ev-input-standar type="password" placeholder="Password" (blur)="onBlurPass($event)"></ev-input-standar>
+    <div>
+      <button mat-raised-button [disabled]="!habilitaLogin" (click)="onClick()">Entrar</button>
+    </div>
+  </div>
+</mat-card>

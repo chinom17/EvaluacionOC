@@ -1,0 +1,32 @@
+<!--<ev-input-standar placeholder="Input" (blur)="onBlur($event)" ngbTooltip="Tooltip on top"></ev-input-standar>
+<ev-input-email></ev-input-email>
+<ev-input-password></ev-input-password>
+<ev-select placeholder="Sexo" (onSelect)="onClick($event)" [Source]="source"></ev-select>-->
+<mat-toolbar color="primary">
+  <!--<button mat-icon-button>
+    <mat-icon>
+      menu
+    </mat-icon>
+  </button>-->
+  <span>Evaluación</span>
+</mat-toolbar>
+<div class="contentPrincipal" >
+  <mat-sidenav-container  class="example-container">
+    <mat-sidenav a mode="side" opened>
+        <a mat-button class="btnNav" color="primary" [routerLink]="'/'">
+          Home
+        </a>
+        <br />
+        <a mat-button class="btnNav" color="primary" [routerLink]="'/cambioPassword'">
+          Cambiar contraseña
+        </a>
+        <br />
+        <a mat-button class="btnNav" color="primary" [routerLink]="'/registrar'">
+          Rregistrar
+        </a>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

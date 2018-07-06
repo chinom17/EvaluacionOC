@@ -1,0 +1,17 @@
+
+
+<mat-form-field class="controles" >
+  <input matInput  [placeholder]="placeholder"  [formControl]="standarFormControl"
+         [errorStateMatcher]="matcher" [type]="type" [(ngModel)]="texto" (blur)="onBlur($event)" />
+
+
+  <mat-error *ngIf="requerido && standarFormControl.hasError('required')">
+    El {{nombre}} es <strong>requerido</strong>
+  </mat-error>
+  <mat-error *ngIf="minLength > 0 && standarFormControl.hasError('minLength')">
+    El {{nombre}} debe tener al menos {{minLength}} caracteres.
+  </mat-error>
+
+</mat-form-field>
+
+

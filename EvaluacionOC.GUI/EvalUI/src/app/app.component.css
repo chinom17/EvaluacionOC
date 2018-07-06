@@ -1,0 +1,16 @@
+.contentPrincipal{
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.example-container {
+  width: 100%;
+  /* height: 200px; */
+  /* margin: 10px;
+  border: 1px solid #555; */
+}
+.btnNav {
+
+  text-align: start;
+}

@@ -1,0 +1,21 @@
+<mat-card class="card-container">
+  <div>
+    <mat-card class="card-content">
+      <ev-data-grid (seleccion)="onSelected($event)" [dataSource]="dataSource" [selectedRowIndex]="selectedRow" [selectedElement]="usuario">
+      </ev-data-grid>
+    </mat-card>
+    <mat-card class="card-contetn-med">
+      <div class="example-element-description">
+        <ev-input-standar placeholder="Nombre de usuario" requerido="true" minLength="7" (blur)="onBlurNU($event)" [texto]="usuario.nombreUsuario"></ev-input-standar>
+        <ev-input-email [texto]="usuario.email" (blur)="onBlurEmail($event)"></ev-input-email>
+        <div>
+          <ev-select placeholder="Sexo" [value]="usuario.genero" (onSelect)="onSelect($event)" [Source]="generos"></ev-select>
+        </div>
+        <br>
+        <div>
+          <button mat-raised-button (click)="onClickMod()" [disabled]="!btnEnabled" placement="top" ngbTooltip="Tooltip on top"> Modificar </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</mat-card>
